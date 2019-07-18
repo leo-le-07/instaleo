@@ -20,4 +20,8 @@ const styles = StyleSheet.create({
   }
 });
 
+FavouriteScreen.navigationOptions = () => ({
+  title: "Favourite"
+});
+
 export default FavouriteScreen;

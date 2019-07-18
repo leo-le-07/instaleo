@@ -20,4 +20,8 @@ const styles = StyleSheet.create({
   }
 });
 
+HomeScreen.navigationOptions = () => ({
+  title: "Instaleo"
+});
+
 export default HomeScreen;
