@@ -7,8 +7,8 @@ import {
 } from "react-navigation";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-import HomeScreen from "./src/components/HomeScreen";
-import FavouriteScreen from "./src/components/FavouriteScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import FavouriteScreen from "./src/screens/FavouriteScreen";
 
 import { OFFSET, routes } from "./src/utils/constants";
 

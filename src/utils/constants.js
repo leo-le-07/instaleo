@@ -1,5 +1,9 @@
 export const OFFSET = 12;
 
+export const fontSizes = {
+  normal: OFFSET * 1.25
+};
+
 export const routes = {
   homeStack: {
     path: "HOME_STACK",
