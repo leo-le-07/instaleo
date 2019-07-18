@@ -9,6 +9,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 import HomeScreen from "./src/screens/HomeScreen";
 import FavouriteScreen from "./src/screens/FavouriteScreen";
+import NewPostScreen from "./src/screens/NewPostScreen";
 
 import { OFFSET, routes } from "./src/utils/constants";
 
@@ -20,6 +21,8 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
     iconName = "home";
   } else if (routeName === routes.favouriteStack.path) {
     iconName = "heart";
+  } else if (routeName === routes.newPostStack.path) {
+    iconName = "plus";
   }
 
   return <Icon name={iconName} light size={25} color={tintColor} />;
@@ -61,9 +64,28 @@ const FavouriteStack = createStackNavigator(
   }
 );
 
+const NewPostStack = createStackNavigator(
+  {
+    [routes.newPostScreen.path]: NewPostScreen
+  },
+  {
+    initialRouteName: routes.newPostScreen.path,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#3cb72c"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontSize: OFFSET * 1.5
+      }
+    }
+  }
+);
+
 const TabNavigator = createBottomTabNavigator(
   {
     [routes.homeStack.path]: HomeStack,
+    [routes.newPostStack.path]: NewPostStack,
     [routes.favouriteStack.path]: FavouriteStack
   },
   {
