@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   container: {},
   createdDateContainer: {
     paddingHorizontal: OFFSET / 1.25,
-    paddingVertical: OFFSET * 1.25
+    paddingVertical: OFFSET
   },
   createdDate: {
     fontSize: fontSizes.normal,
